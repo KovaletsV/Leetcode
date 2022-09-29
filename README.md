@@ -57,15 +57,22 @@ Input: grid = [
 Output: 3
 
 let numIslands = function(grid) {
+
     if ( grid == null || grid.length ==0)
+    
             return 0;
+            
         let noOfIslands = 0;
+        
         for(let i = 0; i < grid.length;i++) {
+        
             
         for (let j = 0; j < grid[i].length; j++) {
             
               if (grid[i][j] == '1') {
+              
                 noOfIslands+= dfs(grid,i,j);
+                
                 }
                 
              }
